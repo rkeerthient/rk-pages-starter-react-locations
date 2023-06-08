@@ -30,15 +30,16 @@
     "font-awesome": "^4.7.0",
     "mapbox-gl": "^2.15.0",
     "markdown-to-jsx": "^7.2.1",
+    "react": "^17.0.2",
     "react-accessible-accordion": "^5.0.0",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.9.0",
     "react-schemaorg": "^2.0.0",
     "react-showdown": "^2.3.1",
     "react-slick": "^0.29.0",
     "schema-dts": "^1.1.2",
     "slick-carousel": "^1.8.1",
-    "tailwind-merge": "^1.13.1",  "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "tailwind-merge": "^1.13.1"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",

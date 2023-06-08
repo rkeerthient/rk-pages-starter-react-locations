@@ -8,3 +8,4 @@ sites-config/features.json
 *.local
 .history
 .DS_Store
+.env
