@@ -19,7 +19,6 @@ import Favicon from "../assets/images/yext-favicon.ico";
 import Banner from "../components/banner";
 import PageLayout from "../components/page-layout";
 import { ExternalImage } from "../types/ExternalImage";
-
 /**
  * Not required depending on your use case.
  */
@@ -45,15 +44,6 @@ type ExternalImageData = TemplateProps & { externalImage: ExternalImage };
  *
  * If the page is truly static this function is not necessary.
  */
-export const transformProps: TransformProps<ExternalImageData> = async (
-  data
-) => {
-  const url = import.meta.env.YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL + "/2";
-  const externalImage = (await fetch(url).then((res: any) =>
-    res.json()
-  )) as ExternalImage;
-  return { ...data, externalImage };
-};
 
 /**
  * Defines the path that the generated file will live at for production.
@@ -63,10 +53,6 @@ export const transformProps: TransformProps<ExternalImageData> = async (
  */
 export const getPath: GetPath<ExternalImageData> = () => {
   return `index.html`;
-};
-
-type ExternalImageRenderData = TemplateRenderProps & {
-  externalImage: ExternalImage;
 };
 
 /**
@@ -79,7 +65,7 @@ export const getHeadConfig: GetHeadConfig<
   TemplateRenderProps
 > = (): HeadConfig => {
   return {
-    title: "Static Page Example",
+    title: "Outreach | Home",
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -90,14 +76,6 @@ export const getHeadConfig: GetHeadConfig<
           content: "Static page example meta description.",
         },
       },
-      // {
-      //   type: "link",
-      //   attributes: {
-      //     rel: "icon",
-      //     type: "image/x-icon",
-      //     href: Favicon,
-      //   },
-      // },
     ],
   };
 };
@@ -106,14 +84,14 @@ export const getHeadConfig: GetHeadConfig<
  * This is the main template. It can have any name as long as it's the default export.
  * The props passed in here are the direct result from `transformProps`.
  */
-const Static: Template<ExternalImageRenderData> = ({ externalImage }) => {
+const Static: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <>
       <PageLayout>
         <Banner name={"Turtlehead Tacos"} />
         <div className="centered-container">
           <div className="section space-y-14 px-10">
-            <Card {...externalImage} />
+            {/* <Card {...externalImage} /> */}
           </div>
         </div>
       </PageLayout>
