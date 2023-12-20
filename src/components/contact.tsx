@@ -1,6 +1,6 @@
-import * as React from "react";
+
 import Cta from "../components/cta";
-import { Address } from "@yext/pages/components";
+import { Address } from "@yext/sites-components";
 
 const Contact = (props: any) => {
   const { address, phone } = props;

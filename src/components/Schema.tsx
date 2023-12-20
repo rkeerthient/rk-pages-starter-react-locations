@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import { JsonLd } from "react-schemaorg";
 import { ClothingStore, FAQPage, Place, ItemList } from "schema-dts";
 import Product from "../types/products";

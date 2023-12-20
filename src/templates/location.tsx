@@ -18,8 +18,7 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
-import * as React from "react";
-import Banner from "../components/banner";
+ import Banner from "../components/banner";
 import Contact from "../components/contact";
 import Cta from "../components/cta";
 import Hours from "../components/hours";

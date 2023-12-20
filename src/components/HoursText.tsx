@@ -1,4 +1,4 @@
-import * as React from "react";
+
 
 const HoursText = ({ document }: any) => {
   const { hours, timezone } = document;
