@@ -136,7 +136,7 @@ const Location: Template<TemplateRenderProps> = ({
     geocodedCoordinate,
     services,
   } = document;
-
+/*tes*/
   return (
     <>
       <PageLayout>
